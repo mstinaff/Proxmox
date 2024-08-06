@@ -28,7 +28,7 @@ rm vikunja-${LATEST}-amd64.deb
 msg_ok "Installed Vikunja"
 
 msg_info "Enabling Service"
-systemctl enable -q --now Vikunja.service
+systemctl enable -q --now vikunja
 msg_ok "Service Enabled"
 
 motd_ssh
