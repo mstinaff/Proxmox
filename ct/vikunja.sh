@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build.func)
+source <(curl -s https://raw.githubusercontent.com/mstinaff/Proxmox/main/misc/build.func)
 # Copyright (c) 2024 Mstinaff
 # Author: Mstinaff
 # License: MIT
@@ -20,9 +20,9 @@ EOF
 header_info
 echo -e "Loading..."
 APP="Vikunja"
-var_disk="2"
+var_disk="8"
 var_cpu="1"
-var_ram="512"
+var_ram="1024"
 var_os="debian"
 var_version="12"
 variables
