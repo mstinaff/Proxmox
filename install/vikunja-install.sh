@@ -21,9 +21,9 @@ msg_ok "Installed Dependencies"
 
 msg_info "Installing Vikunja"
 LATEST=$(curl -sL https://dl.vikunja.io/vikunja | grep -Po '(?<="name">)(.*)(?=<)' | sort -rn | head -n 1)
-msg_info ${LATEST}
-wget https://dl.vikunja.io/vikunja/${LATEST}/vikunja-${LATEST}-amd64.deb &>/dev/null
-#wget https://dl.vikunja.io/vikunja/0.24.1/vikunja-0.24.1-amd64.deb
+msg_info "vikunja_${LATEST}_amd64.deb"
+#wget https://dl.vikunja.io/vikunja/${LATEST}/vikunja-${LATEST}-amd64.deb &>/dev/null
+wget https://dl.vikunja.io/vikunja/0.24.1/vikunja-0.24.1-amd64.deb
 $STD dpkg -i vikunja_${LATEST}_amd64.deb &>/dev/null
 rm vikunja_${LATEST}_amd64.deb
 msg_ok "Installed Vikunja"
