@@ -69,8 +69,8 @@ msg_info "Updating ${APP}"
 LATEST=$(curl -sL https://dl.vikunja.io/vikunja | grep -Po '(?<="name">)(.*)(?=<)' | sort -rn | head -n 1)
 wget https://dl.vikunja.io/vikunja/${LATEST}/vikunja-${LATEST}-amd64.deb &>/dev/null
 #wget https://dl.vikunja.io/vikunja/0.24.1/vikunja-0.24.1-amd64.deb
-dpkg -i vikunja_${LATEST}_amd64.deb &>/dev/null
-rm vikunja_${LATEST}_amd64.deb
+dpkg -i vikunja-${LATEST}-amd64.deb &>/dev/null
+rm vikunja-${LATEST}-amd64.deb
 msg_ok "Updated ${APP}"
 
 
